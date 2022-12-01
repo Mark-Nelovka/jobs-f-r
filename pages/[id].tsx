@@ -16,7 +16,7 @@ import ArrowBack from "../assets/images/Arrow-back-icon.svg";
 export default function DetailedJob({
   data,
   status,
-}: InferGetServerSidePropsType<typeof getStaticProps>) {
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const [item, setItem] = useState<IDataItems[]>([]);
   const [state, setState] = useState("idle");
 
@@ -269,7 +269,7 @@ interface IStaticProps {
   };
 }
 
-export async function getStaticProps({ params }: IStaticProps) {
+export async function getServerSideProps({ params }: IStaticProps) {
   const { id } = params;
   const res = await fetch(`https://jobs-back.onrender.com/${id}`);
   const { data, status } = await res.json();
@@ -278,15 +278,3 @@ export async function getStaticProps({ params }: IStaticProps) {
     props: { status, data },
   };
 }
-
-export const getStaticPaths = async () => {
-  const res = await fetch("https://jobs-back.onrender.com");
-  const data = await res.json();
-  const paths = data.data.map((item: IDataItems) => ({
-    params: { id: item._id.toString() },
-  }));
-  return {
-    paths,
-    fallback: false,
-  };
-};
