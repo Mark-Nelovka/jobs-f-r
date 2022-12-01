@@ -1,0 +1,111 @@
+.section {
+    @apply bg-mainBack w-screen py-5;
+}
+
+.job-container {
+    @apply sm:container sm:max-w-[416px] xl:container xl:max-w-[1432px] mx-auto;
+}
+
+.job-list__item {
+    @apply sm:bg-cardMobile sm:h-[206px] xl:h-[164px] bg-white sm:py-4 mb-2 px-4 py-6 flex xl:items-center w-full rounded-lg;
+}
+
+.job-list__item:last-child {
+    @apply mb-0;
+}
+
+.job-list__image-container {
+    @apply sm:mt-9 mr-6;
+}
+
+.job-list__image-container > img {
+    @apply rounded-[50%] h-[66px] w-[66px];
+}
+
+.job-list__info-container {
+    @apply sm:w-[279px];
+}
+
+.job-list__title-container {
+    @apply cursor-pointer sm:mt-4 xl:max-w-[712px];
+}
+
+.job-list__title-container > a:first-child {
+    @apply font-nova sm:font-normal sm:text-base sm:tracking-[-0.5625px] font-bold text-xl text-titleGrey tracking-[-0.625px] ml-0;
+}
+
+.job-list__title-container>div {
+    @apply font-nova sm:my-1 font-normal text-base text-lightGrey tracking-[0.23619px] my-2;
+}
+
+.job-list__title-container>div>span:nth-child(1)::after {
+    @apply content-["\2022"] mx-1;
+}
+
+.job-list__location-container {
+    @apply font-nova font-normal text-base text-lightGrey tracking-[0.23619px];
+}
+
+.job-list__location-container > span:first-child {
+    @apply mr-2;
+}
+
+.star-rating {
+    @apply text-[0px] ml-auto mr-8 sm:hidden xl:block;
+}
+
+.star-rating-sm {
+    @apply xl:hidden flex items-center justify-between;
+}
+
+.star-rating__wrap {
+    @apply inline-block text-[1rem];
+}
+
+.star-rating__ico {
+    @apply float-right xl:px-[2px] cursor-pointer text-black before:content-["\2606"];
+}
+
+.star-rating__ico--active {
+    @apply float-right xl:px-[2px] cursor-pointer text-black before:content-["\2605"];
+}
+
+.star-rating__input {
+    @apply hidden;
+}
+
+.star-rating__ico:hover::before,
+.star-rating__ico:hover~.star-rating__ico::before,
+.star-rating__input:checked~.star-rating__ico::before {
+    @apply content-["\2605"];
+}
+
+.job-list__save-container {
+    @apply text-end sm:hidden;
+}
+
+.job-list__save-container-sm {
+    @apply text-end xl:hidden;
+} 
+
+.job-list__save-container-sm > p {
+    @apply xl:mt-10 font-nova sm:font-light sm:text-sm font-normal text-base text-lightGrey sm:tracking-[0.206667px] tracking-[0.23619px];}
+
+.job-list__save-container > p  {
+    @apply xl:mt-10 font-nova sm:font-light sm:text-sm font-normal text-base text-lightGrey sm:tracking-[0.206667px] tracking-[0.23619px];
+}
+
+.job-list__save-icon {
+    @apply cursor-pointer fill-none;
+}
+
+.job-list__save-icon--save {
+    @apply cursor-pointer fill-darkGrey;
+}
+
+.job-list__save-icon:hover {
+    @apply fill-darkGrey;
+}
+
+
+
