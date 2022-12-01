@@ -94,7 +94,6 @@ export default function Home({
       {state === "loading" && <Loader />}
       <>
         <section className="section">
-          {state === "idle" && "waiting to fething"}
           {state === "resolve" && (
             <div className="job-container">
               <ul className="job-list">
