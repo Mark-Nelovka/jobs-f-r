@@ -271,7 +271,7 @@ interface IStaticProps {
 
 export async function getServerSideProps({ params }: IStaticProps) {
   const { id } = params;
-  const res = await fetch(`https://jobs-back.onrender.com/${id}`);
+  const res = await fetch(`https://exuberant-ruby-fedora.cyclic.app/${id}`);
   const { data, status } = await res.json();
 
   return {
