@@ -367,7 +367,6 @@ export default function Home({
 
 export async function getServerSideProps() {
   const res = await fetch("https://exuberant-ruby-fedora.cyclic.app");
-  console.log(res);
   const { data, status } = await res.json();
 
   return {
